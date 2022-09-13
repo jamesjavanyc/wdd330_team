@@ -1,3 +1,5 @@
+import {getLocalStorage} from "./utils.js"
+
 let products = [];
 function convertToJson(res) {
   if (res.ok) {
@@ -27,7 +29,10 @@ function getProductsData() {
 // add to cart button event handler
 function addToCart(e) {
   const product = products.find((item) => item.Id === e.target.dataset.id);
-  setLocalStorage("so-cart", product);
+  let cart = getLocalStorage("so-cart");
+  if(cart == null) cart = [];
+  cart.push(product)
+  setLocalStorage("so-cart", cart);
 }
 
 getProductsData();
