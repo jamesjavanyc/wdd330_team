@@ -1,30 +1,22 @@
-import {getLocalStorage, setLocalStorage} from "./utils.js"
-
-
-
-
-export default  class ProductData{
-    constructor(){
-        this.products = this.getData();
+function convertToJson(res) {
+    if (res.ok) {
+      return res.json();
+    } else {
+      throw new Error('Bad Response');
     }
-    async getData(){
-        let data = await fetch("../json/tents.json").then(res => this.convertToJson(res));
-        console.log(data)
-        this.products = data
-        return data;
+  }
+  
+  export default class ProductData  {
+    constructor(category) {
+      this.category = category;
+      this.path = `../json/${this.category}.json`;
     }
-    findProductById(id){
-        const product = this.products.find((item) => item.Id === id);
-        let cart = getLocalStorage("so-cart");
-        if (cart == null) cart = [];
-        cart.push(product);
-        setLocalStorage("so-cart", cart);
+    getData() {
+      return fetch(this.path)
+        .then(convertToJson).then((data) => data);
     }
-    convertToJson(res) {
-        if (res.ok) {
-            return res.json();
-        } else {
-            throw new Error("Bad Response");
-        }
+    async findProductById(id) {
+      const products = await this.getData()
+      return products.find((item) => item.Id === id);
     }
-}
+  }

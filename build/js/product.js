@@ -1,9 +1,1 @@
-import ProductData from "./productDara.js";
-import ProductDetails from ".producDetails.js";
-import { getParam} from "./utils.js";
-
-const dataSource = new ProductData("tents");
-const productId = getParam("product");
-
-const product = new ProductDetails(productId, dataSource);
-product.init();
+import t from"./productData.js";import o from"./productDetails.js";import{getParam as r}from"./utils.js";const c=new t("tents"),a=r("product"),s=new o(a,c);s.init();
