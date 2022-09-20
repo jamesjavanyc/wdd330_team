@@ -7,7 +7,7 @@ export class ProductDetails {
     }
     async init(){
       this.productDetail = await this.dataSource.findProductById(this.productId)
-      document.querySelector(".divider").innerHTML = this.renderProductDetails(this.productDetail);
+      document.querySelector("#productContainer").innerHTML = this.renderProductDetails(this.productDetail);
       document.getElementById("addToCart").addEventListener("click", this.addToCart.bind(this));
     }
     addToCart() {
