@@ -1,4 +1,10 @@
 import { getLocalStorage } from "./utils.js";
+import ProductData from "./productData.js"
+
+let productData = new ProductData();
+console.log(productData)
+
+
 
 let products = [];
 function convertToJson(res) {
