@@ -1,6 +1,6 @@
 import {getLocalStorage, setLocalStorage} from "./utils.js"
 
-export default  class ProductData{
+export default class ProductData{
     constructor(tents){
 
     }
