@@ -1,21 +1,25 @@
 import { getLocalStorage } from "./utils.js";
 import ProductData from "./productData.js"
 import {getParam} from "./utils.js"
-import {ProductDetails} from "./productDetails.js"
+import ProductDetails from "./productDetails.js"
 
-let dataSource;
-const productId = getParam("product");
-let productDetail;
+// let dataSource;
+// const productId = getParam("product");
+// let productDetail;
 
-async function initDataSource(){
-  dataSource = new ProductData();
-  await dataSource.getData();
-  productDetail = new ProductDetails(productId, dataSource);
-  await productDetail.init()
-}
-initDataSource();
+// async function initDataSource(){
+//   dataSource = new ProductData();
+//   await dataSource.getData();
+//   productDetail = new ProductDetails(productId, dataSource);
+//   await productDetail.init()
+// }
+// initDataSource();
 
+const productId = getParam('product');
+const dataSource = new ProductData();
 
+const product = new ProductDetails(productId, dataSource);
+product.init();
 
 
 // let products = [];

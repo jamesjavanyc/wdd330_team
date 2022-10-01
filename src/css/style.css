@@ -155,14 +155,42 @@ button {
 }
 /* End product list card */
 
+.product-grid {
+  list-style-type:none ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding-left:0 ;
+  font-size: 10px;
+}
+
+.product-grid > li {
+  width: 150px;
+  padding: 0.5em;
+  margin: 1em;
+}
+
+.product-grid h2 {
+  margin: 0;
+  font-size: 12px;
+}
+.product-grid a {
+  text-decoration: none;
+}
+.product-grid a:hover {
+  text-decoration: underline;
+}
+.product-grid a:link, .product-grid a:visited{
+  color: var(--dark-grey)
+}
 .product-detail {
   padding: 1em;
   max-width: 500px;
   margin: auto;
 }
-
-.product-detail img {
-  width: 100%;
+ .product-detail img {
+  max-width: 100%;
 }
 
 /* Start cart list card styles */
