@@ -1,6 +1,6 @@
 // wrapper for querySelector...returns matching element
-export function qs(selector, parent = document) {
-  return parent.querySelector(selector);
+export function qs(selector) {
+  return document.querySelector(selector);
 }
 // or a more concise version if you are into that sort of thing:
 // export const qs = (selector, parent = document) => parent.querySelector(selector);
@@ -26,14 +26,6 @@ export function setClick(selector, callback) {
 export function getParam(param){
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  const product = urlParams.get(param)
-  return product
+  return urlParams.get(param);
 }
 
-export function renderListWithTemplate(template, parent, list, callback) {
-  list.forEach(item => {
-    const clone = template.content.cloneNode(true);
-    const templateWithData = callback(clone, item);
-    parent.appendChild(templateWithData);
-  })
-}

@@ -1,13 +1,15 @@
 import { renderListWithTemplate } from "./utils";
 
-export default class ProductListing {
+export default class ProductList {
     constructor(category, dataSource, listElement) {
         this.category = category;
         this.dataSource = dataSource;
         this.listElement = listElement;
     }
     async init() {
-        this.renderList(await this.dataSource.getData());
+      /*this.renderList(await this.dataSource.getData());*/
+      const list = await this.dataSource.getData();
+      this.renderList(list);
     }
     // renderList(list) {
     //     const template = document.getElementById("product-card-template");
@@ -18,9 +20,9 @@ export default class ProductListing {
     prepareTemplate(template, product) {
         template.querySelector("a").href += product.Id;
         template.querySelector("img").src = product.Image;
-        template.querySelector("h3").innerText = product.Brand.Name;
-        template.querySelector("h2").innerText = product.NameWithoutBrand;
-        template.querySelector("p").innerText = product.ListPrice;
+        template.querySelector('.card__brand').textContent = product.Brand.Name;
+        template.querySelector('.card__name').textContent = product.NameWithoutBrand;
+        template.querySelector('.product-card__price').textContent += product.FinalPrice; 
         return template;
     }
     renderList(list) {
