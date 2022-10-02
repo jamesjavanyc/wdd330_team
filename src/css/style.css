@@ -215,6 +215,31 @@ button {
   }
 }
 
+/* --------------------------GRID ADDED TEAM ACTIVITY 5 ------------------------------------------*/
+
+.grid-products {
+  display: grid;
+  grid-template-columns: repeat(4, 0.199fr);
+  grid-auto-rows: 200px;
+  margin-left: 220px;
+  margin-top: 50px;
+}
+
+/* -------------------------- SIZE OF ICONS and TEXT EDITED FOR Team Act5 ----------------------*/
+
+.icons_products{
+  width: 65%;
+}
+
+.h2_icon_product{
+  text-decoration: none;
+  margin-left: -14px;
+}
+
+.h2_icon_product_detail{
+  margin-left: 10px;
+}
+
 footer {
   font-size: var(--small-font);
   padding: 1em;
