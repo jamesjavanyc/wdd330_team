@@ -7,7 +7,7 @@ module.exports = {
   },
   buildOptions: {
     out: "build",
-    baseUrl: "/sleepoutside/build/",
+    baseUrl: "/localhost:3000/",
     clean: true,
   },
   experiments: {
