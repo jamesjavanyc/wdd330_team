@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sleep Outside | Checkout</title>
     <link rel="stylesheet" href="/src/css/style.css" />
+    <script src="../js/checkout.js" type="module"></script>
   </head>
   <body>
     <header class="divider" id="main-header">
@@ -43,6 +44,54 @@
     <main class="divider">
       <section class="products">
         <h2>Review & Place your Order</h2>
+        <form name="checkout">
+          <fieldset>
+            <legend>Shipping</legend>
+            <label for="fname">First Name
+              <input type="text" id="fname" required>
+            </label>
+            <label for="lname">Last Name
+              <input type="text" id="lname" required>
+            </label>
+            <label for="street">Street
+              <input type="text" id="street" required>
+            </label>
+            <label for="city">City
+              <input type="text" id="city" required>
+            </label>
+            <label for="state">State
+              <input type="text" id="state" required>
+            </label>
+            <label for="zipnum">Zip
+              <input type="text" id="zipnum" required>
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Payment</legend>
+            <label for="cardNumber">Card Number
+              <input type="text" id="cardNumber" required>
+            </label>
+            <label for="expiration">Expiration
+              <input type="text" id="expiration" required >
+            </label>
+            <label for="codeNumber">Security Code
+              <input type="text" id="codeNumber" required>
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Order Summary</legend>
+            <ul>
+              <li>Item Subtotal
+                <span id="subtotalNumber"></span>
+                <span id="subTotal"></span>
+              </li>
+              <li>Shipping Estimate<span id="shipping"></span></li>
+              <li>Tax <span id="tax"></span></li>
+              <li><b>Order Total</b> <span id="orderTotal"></span></li>
+            </ul>
+          </fieldset>
+          <button type="submit">Checkout</button>
+        </form>
       </section>
     </main>
     <footer id="main-footer">

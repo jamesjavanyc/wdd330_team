@@ -12,7 +12,7 @@ function convertToJson(res) {
     }
 }
 
-export default class ProductData{
+export default class ExternalServices{
     constructor(){
         // this.path = product
         // this.category = category
@@ -42,6 +42,16 @@ async findProductById(id){
         // return product
      
     }
+    async checkout(payload) {
+        const options = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        };
+        return await fetch(baseURL + 'checkout/', options).then(convertToJson);
+      }
 }
     // convertToJson(res) {
     //     if (res.ok) {

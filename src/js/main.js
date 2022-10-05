@@ -1,8 +1,8 @@
 import { loadHeaderFooter } from './utils.js';
-import ProductData from './productData.js';
+import ExternalServices from './ExternalServices.js';
 import ProductList from './productList.js';
-// import { ProductData } from './productData.js';
+// import { ExternalServices } from './ExternalServices.js';
 // import { ProductList } from './productList.js';
 loadHeaderFooter()
 
-const proData = new ProductData('tents')
+const proData = new ExternalServices('tents')
