@@ -1,17 +1,18 @@
 let http = new XMLHttpRequest();
-http.open('get', 'json/general.json', true);
+http.open("get", "json/general.json", true);
 http.send();
 http.onload = function () {
-    if(this.readyState == 4 && this.status == 200) {
-        let dogs = JSON.parse(this.responseText);
-        let output = "";
-        for(let item of dogs) {
-            output += `
+  if (this.readyState == 4 && this.status == 200) {
+    let dogs = JSON.parse(this.responseText);
+    let output = "<ul class='x-grid'>";
+    for (let item of dogs) {
+      output += `
                 <li>
                     <div class="maincontainer">
-                        <div class="thecard x-img-1">
+                        <div class="thecard">
                             <div class="thefront">
-                                <a href="https://www.cdc.gov/tb/topic/basics/default.htm" target="_blank"></a>
+                                <img class="theimage" src="${item.imageUrl}" alt="${item.breed}">
+                                <a href="https://www.xcdc.gov/tb/topic/basics/default.htm" target="_blank"></a>
                             </div>
                             <div class="theback img-blank">
                                 <a href="https://www.cdc.gov/tb/topic/basics/default.htm" target="_blank"></a>
@@ -27,10 +28,9 @@ http.onload = function () {
                         </div>
                     </div>	
                 </li>
-            </ul>
-        </div>
             `;
-        }
-        document.querySelector(".dogs").innerHTML = output;
     }
+    output += "</ul>"
+    document.querySelector(".dogs").innerHTML = output;
+  }
 } 
