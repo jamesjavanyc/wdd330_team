@@ -247,3 +247,24 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
+
+
+/*---------FORM------------*/
+.formTitle {
+  text-align: center;
+}
+
+input {
+  display: block;
+}
+
+.form1 {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.listForm {
+  list-style: none;
+  padding-left: 0;
+}
+

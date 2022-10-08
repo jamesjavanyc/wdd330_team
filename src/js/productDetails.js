@@ -29,6 +29,8 @@ export default class ProductDetails {
        
       cartContents.push(this.product);
       setLocalStorage('so-cart', cartContents);
+      alertMessage(`${this.product.NameWithoutBrand} added to cart!`)
+  }
     // renderProductDetails(detail) {
     //   console.log(detail)
     //     const item =  `

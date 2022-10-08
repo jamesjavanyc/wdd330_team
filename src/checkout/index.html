@@ -40,10 +40,79 @@
         </a>
       </div> -->
     </header>
-    <main class="divider">
-      <section class="products">
-        <h2>Review & Place your Order</h2>
-      </section>
+    <main class="divider checkout">
+     
+        <h2 class="formTitle">Review & Place your Order</h2>
+        <section class="checkout-form">
+          <form class="form1" name="checkout">
+            <fieldset>
+              <legend>Shipping</legend>
+              <div class="checkout__name">
+                <label for="fname">First Name
+                <input type="text" name="fname" required /></label>
+                <label for="lname">Last Name
+                <input type="text"  name="lname" required /></label> 
+              </div>
+              <div class="checkout__address">
+                <label for="street">Street
+                <input type="text" name="street" required /></label>
+                <label for="city">City
+                <input type="text" name="city" required /></label>
+                <label for="state">State
+                <input type="text" name="state" required /></label>
+                <label for="zip">Zip
+                <input type="text" name="zip" id="zip" required /></label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Payment</legend>
+              <label for="cardNumber">Card number
+              <input
+                name="cardNumber"
+                required
+                placeholder="No spaces or dashes!"
+                maxlength="16"
+                minlength="16"
+              /></label>
+              <label for="expiration">Expiration</label>
+              <input name="expiration" required placeholder="mm/yy" />
+              <label for="code">Security Code 
+              <input
+                name="code"
+                required
+                placeholder="xxx"
+                maxlength="3"
+                minlength="3"
+              /></label>
+            </fieldset>
+            <fieldset class="checkout-summary">
+              <legend>Order Summary</legend>
+              <ul class="listForm">
+                <li>
+                  <label for="cartTotal"
+                    >Item Subtotal(<span id="num-items"></span>)</label
+                  >
+                  <p name="cartTotal" id="cartTotal"></p>
+                </li>
+                <li>
+                  <label for="shipping">Shipping Estimate</label>
+                  <p id="shipping"></p>
+                </li>
+                <li>
+                  <label for="tax">Tax</label>
+                  <p id="tax"></p>
+                </li>
+                <li>
+                  <label for="orderTotal"><b>Order Total</b></label>
+                  <p id="orderTotal"></p>
+                </li>
+              </ul>
+            </fieldset>
+  
+            <button id="checkoutSubmit" type="submit">Checkout</button>
+          </form>
+        </section>
+       
     </main>
     <footer id="main-footer">
       <!-- &copy;NOT a real business -->

@@ -9,14 +9,18 @@ export default class ProductList {
     async init() {
         // const list = await this.dataSource.getData()
         const list = await this.dataSource.getData(this.category);
+        this.renderList(list);
+        document.querySelector(".title").innerHTML = this.category;
+    
     }
     renderList(list) {
+        this.listElement.innerHTML ="";
         const template = document.getElementById('product-card-template')
-        list.forEach(product=> {
-            const clone = template.content.cloneNode(true);
-            const hydratedTemplate = this.prepareTemplate(clone, product);
-            this.listElement.appendChild(clone);
-        })
+        // list.forEach(product=> {
+        //     const clone = template.content.cloneNode(true);
+        //     const hydratedTemplate = this.prepareTemplate(clone, product);
+        //     this.listElement.appendChild(clone);
+        renderListWithTemplate(template,this.listElement,list,this.prepareTemplate);
     }
 
     prepareTemplate(template,product) {

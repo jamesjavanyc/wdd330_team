@@ -1,8 +1,8 @@
-import { getLocalStorage } from "./utils.js";
-import ProductData from "./productData.js"
+// import { getLocalStorage } from "./utils.js";
+// import ProductData from "./productData.js"
 import {getParam} from "./utils.js"
 import ProductDetails from "./productDetails.js"
-
+import ExternalServices from "./ExternalServices.js";
 // let dataSource;
 // const productId = getParam("product");
 // let productDetail;
@@ -16,7 +16,7 @@ import ProductDetails from "./productDetails.js"
 // initDataSource();
 
 const productId = getParam('product');
-const dataSource = new ProductData();
+const dataSource = new ExternalServices();
 
 const product = new ProductDetails(productId, dataSource);
 product.init();
