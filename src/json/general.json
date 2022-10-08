@@ -6,7 +6,7 @@
         "personality": "She is very loving and enjoys company, loves to snuggle close to her caregiver",
         "special_gift": "Incredible sense of hearing.",
         "breed": "Pomeranian",
-        "imageUrl": "../images/dog1.jpg"
+        "imageUrl": "/images/dog1.jpg"
     },
     {
         "age": "6 months",
@@ -15,7 +15,7 @@
         "personality": "Super docile and active puppy loves leash walks in the park",
         "special_gift": "Excellent car passenger",
         "breed": "Mongrel",
-        "imageUrl": "../images/dog2.jpg"
+        "imageUrl": "/images/dog2.jpg"
     },
     {
         "age": "7 months",
@@ -24,7 +24,7 @@
         "personality": "Playful, active and loyal",
         "special_gift": "Excellent making friends with other dogs or cats",
         "breed": "Mongrel",
-        "imageUrl": "../images/dog3.jpg"
+        "imageUrl": "/images/dog3.jpg"
     },
     {
         "age": "3 years",
@@ -33,6 +33,6 @@
         "personality": "Calm and Polite",
         "special_gift": "Is very sociable with strangers",
         "breed": "Schnauzer",
-        "imageUrl": "../images/dog4.jpg"
+        "imageUrl": "/images/dog4.jpg"
     }
 ]
