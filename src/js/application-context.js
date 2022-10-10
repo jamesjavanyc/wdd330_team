@@ -1,5 +1,5 @@
-class ApplicationContext{
+export class ApplicationContext{
     constructor(){
-        
+
     }
 }
