@@ -15,15 +15,36 @@ export default class DataSource{
         }
         this.initialized = true;
     }
-    async getData(){
+    getData(){
         if(this.initialized){
-            await this.init();
+            throw "Data source is not initialized.";
         }
         return this.data;
     }
-    async getDogs(){
-        let data = await this.getData();
+    getDogs(){
+        let data = this.getData();
         return data.dogs;
+    }
+    getDog(id){
+        let target = {};
+        this.getDogs().map(dog=>{
+            if(dog.id == id){
+                target = dog
+            }
+        })
+        return target;
+    }
+    adoptDog(dogId){
+        this.getDogs().map(dog =>{
+            if(dog.id === dogId){
+                dog.isAdopted = true;
+                localStorage.setItem("data",JSON.stringify(this.data))
+            }
+        })
+    }
+    addDog(dog){
+        this.getDogs().append(dog);
+        localStorage.setItem("data",JSON.stringify(this.data))
     }
 
 }
