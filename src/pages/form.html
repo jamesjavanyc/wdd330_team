@@ -188,7 +188,7 @@
 
       <!-- submit button -->
       <div id="button">
-        <button type="submit" id="submit" onsubmit={submitHandler()}>Submit</button>
+        <div id="submit">Submit</div>
       </div>
 
 
@@ -207,14 +207,13 @@
   <script  type="text/javascript"  >
     const submitHandler = (e) => {
       e.preventDefault()
-      // logic url redirect to
-      // use local storage to save information
-      console.log(1)
-      window.location.replace("../index.html")
+      localStorage.setItem("name",document.querySelector("#name").value)
+      localStorage.setItem("lastName", document.querySelector("#lastName").value)
+      window.location.replace("/pages/order-confirm.html")
     }
-    // window.onbeforeunload = function (e) {
-    //   window.location.replace("../index.html")
-    // };
+    let submitBtn = document.querySelector("#submit")
+    submitBtn.addEventListener("click",submitHandler)
+
   </script>
 </body>
 

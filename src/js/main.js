@@ -8,6 +8,9 @@ const renderHomePage = async(dataSource)=>{
     for (let item of data.dogs) {
         // add pet it inside the href attri or you can add event listener refresh with url param
         // use map() with id
+        if(item.isAdopted == false){
+            continue
+        }
         output += `
             <li>
                 <div class="maincontainer">
