@@ -13,6 +13,7 @@ const submitHandler = async(e) => {
     let data = await dataSource.init();
     let dog = {}
     dog.age = age.value 
+    dog.size = size.value
     dog.gender = gender.value
     dog.breed = breed.value
     dog.imageUrl = imageUrl.value

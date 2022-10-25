@@ -4,7 +4,7 @@ export default class DataSource{
         this.initialized = false;
     }
     async init(){
-        if(localStorage.getItem("data") !== "null" || localStorage.getItem("data") !== null){
+        if(localStorage.getItem("data") !== null){
             //we have the data in localstorage, so we need to get the stored data
             this.data = JSON.parse(localStorage.getItem("data"));
         }else{
