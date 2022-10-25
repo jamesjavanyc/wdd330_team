@@ -44,7 +44,10 @@ export default class DataSource{
         })
     }
     addDog(dog){
+        let _id = 1 + this.getDogs()[ this.getDogs.length - 1].id
+        dog.id = _id
         this.getDogs().append(dog);
+        console.log(this.data)
         localStorage.setItem("data",JSON.stringify(this.data))
     }
 
