@@ -14,6 +14,7 @@ export default class DataSource{
             localStorage.setItem("data",JSON.stringify(this.data))
         }
         this.initialized = true;
+        return this.data
     }
     getData(){
         if(this.initialized){

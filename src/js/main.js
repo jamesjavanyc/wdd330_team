@@ -2,10 +2,10 @@ import DataSource from "./data-source.js";
 // index.html page js file
 let datasource = new DataSource();
 const renderHomePage = async(dataSource)=>{
-    await dataSource.init();
-    let dogs = await dataSource.getDogs()
+    let data = await dataSource.init();
+    //let dogs = await dataSource.getDogs()
     let output = "<ul class='x-grid'>";
-    for (let item of dogs) {
+    for (let item of data.dogs) {
         // add pet it inside the href attri or you can add event listener refresh with url param
         // use map() with id
         output += `

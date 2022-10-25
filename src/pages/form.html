@@ -188,7 +188,7 @@
 
       <!-- submit button -->
       <div id="button">
-        <button type="submit" id="submit">Submit</button>
+        <button type="submit" id="submit" onsubmit={submitHandler()}>Submit</button>
       </div>
 
 
@@ -203,7 +203,19 @@
 
   <!-- footer -->
 
-  <script src="js/.js"></script>
+  <script src="../js/form.js" type="text/javascript"></script>
+  <script  type="text/javascript"  >
+    const submitHandler = (e) => {
+      e.preventDefault()
+      // logic url redirect to
+      // use local storage to save information
+      console.log(1)
+      window.location.replace("../index.html")
+    }
+    // window.onbeforeunload = function (e) {
+    //   window.location.replace("../index.html")
+    // };
+  </script>
 </body>
 
 </html>
