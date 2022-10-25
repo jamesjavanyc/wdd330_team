@@ -13,6 +13,7 @@ const submitHandler = async(e) => {
     let data = await dataSource.init();
     let dog = {}
     dog.age = age.value 
+    dog.size = size.value
     dog.gender = gender.value
     dog.breed = breed.value
     dog.imageUrl = imageUrl.value
@@ -25,7 +26,7 @@ const submitHandler = async(e) => {
     console.log(data.dogs)
     localStorage.setItem("data",JSON.stringify(data))
     console.log(localStorage.getItem("data"))
-    //window.location.replace("/pages/order-confirm.html")
+    window.location.replace("/pages/order-confirm.html")
 }
 let submitBtn = document.querySelector("#button")
 submitBtn.addEventListener("click", submitHandler)
