@@ -25,7 +25,7 @@ const submitHandler = async(e) => {
     console.log(data.dogs)
     localStorage.setItem("data",JSON.stringify(data))
     console.log(localStorage.getItem("data"))
-    //window.location.replace("/pages/order-confirm.html")
+    window.location.replace("/pages/order-confirm.html")
 }
 let submitBtn = document.querySelector("#button")
 submitBtn.addEventListener("click", submitHandler)
