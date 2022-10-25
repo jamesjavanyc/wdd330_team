@@ -1,17 +1,16 @@
 import DataSource from "./data-source.js";
 // index.html page js file
 let datasource = new DataSource();
-const renderHomePage = async(dataSource)=>{
-    let data = await dataSource.init();
-    //let dogs = await dataSource.getDogs()
-    let output = "<ul class='x-grid'>";
-    for (let item of data.dogs) {
-        // add pet it inside the href attri or you can add event listener refresh with url param
-        // use map() with id
-        if(item.isAdopted == false){
-            continue
-        }
-        output += `
+const renderHomePage = async (dataSource) => {
+  let data = await dataSource.init();
+  let output = "<ul class='x-grid'>";
+  for (let item of data.dogs) {
+    // add pet it inside the href attri or you can add event listener refresh with url param
+    // use map() with id
+    if (item.isAdopted == false) {
+      continue
+    }
+    output += `
             <li>
                 <div class="maincontainer">
                     <div class="thecard">
@@ -34,9 +33,9 @@ const renderHomePage = async(dataSource)=>{
                 </div>	
             </li>
         `;
-    }
-    output += "</ul>"
-    document.querySelector(".dogs").innerHTML = output;
+  }
+  output += "</ul>"
+  document.querySelector(".dogs").innerHTML = output;
 }
 
 renderHomePage(datasource);
