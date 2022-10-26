@@ -3,8 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@500&display=swap");
 
-:root{
-  --surface-color:#fff;
+:root {
+  --surface-color: #fff;
   --curve: 10;
 }
 
@@ -116,16 +116,17 @@
   background-position: 45%;
 }
 
-.img_banner{
+.img_banner {
   background-image: url(../images/banner.jpg);
-  background-size:cover;
+  background-size: cover;
   position: relative;
   opacity: 0.8;
-  
+
 }
+
 .about_us_banner {
   height: 300px;
-  margin: 5px; 
+  margin: 5px;
 }
 
 /*Grid section*/
@@ -178,9 +179,11 @@
   font-size: 3em;
   color: orange;
 }
+
 .x-info p {
   padding: 5px;
 }
+
 .maincontainer {
   background-color: transparent;
   width: 100%;
@@ -195,15 +198,17 @@
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   /* overflow: hidden; */
 }
-.theimage{
-  
+
+.theimage {
+
   width: 100%;
-  height: 100%; 
+  height: 100%;
   /* background-size: ;   */
-} 
+}
+
 .maincontainer:hover .thecard {
   transform: rotateY(180deg);
 }
@@ -211,7 +216,7 @@
 .thefront, .x-info {
   position: absolute;
   width: 100%;
-   height: 100%; 
+  height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -226,7 +231,6 @@
   color: white;
   transform: rotateY(180deg);
 }
-
 
 
 /*Form section*/
@@ -247,7 +251,7 @@ header {
   padding: 1px 55px;
   font-family: 'Underdog', cursive;
   text-shadow: 4px 2px 5px #ffa366, 0 1px 2px #120901;
-  margin-bottom: 0!important;
+  margin-bottom: 0 !important;
 }
 
 .back-picture {
@@ -377,17 +381,18 @@ textarea {
 }
 
 /* about us style */
-.banner_container{
+.banner_container {
   position: absolute;
   top: 50%;
   left: 50%;
   text-align: center;
   color: #fff;
   font-weight: 700;
-  font-size:xx-large;
+  font-size: xx-large;
   text-transform: uppercase;
   transform: translate(-50%, -50%);
 }
+
 .banner_container p {
   border: 6px solid white;
   padding: 5px;
@@ -472,6 +477,7 @@ textarea {
   right: 0;
   z-index: 1;
 }
+
 .card__svg path {
   fill: var(--surface-color);
   d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
@@ -539,6 +545,7 @@ ul {
   font-weight: 500;
   position: relative;
 }
+
 .footer-col h4::before {
   content: "";
   position: absolute;
@@ -566,6 +573,7 @@ ul {
   display: block;
   transition: all 0.3s ease;
 }
+
 .footer-col ul li a:hover {
   color: #fff;
   padding-left: 8px;
@@ -590,6 +598,17 @@ ul {
   background-color: #fff;
 }
 
+.read-more-link {
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 10px;
+  text-decoration: none;
+}.read-more-link:hover {
+  color: black;
+  background-color: white;
+}
 
 @media (min-width: 760px) and (min-device-width: 760px) {
   header {
@@ -628,7 +647,8 @@ ul {
   .footer-col {
     width: 100%;
   }
-  .img_banner{
+
+  .img_banner {
     background-position: 40%;
   }
 }
