@@ -199,9 +199,10 @@
   /* overflow: hidden; */
 }
 .theimage{
-   
+  
   width: 100%;
-  height: 100%;
+  height: 100%; 
+  /* background-size: ;   */
 } 
 .maincontainer:hover .thecard {
   transform: rotateY(180deg);
@@ -210,7 +211,7 @@
 .thefront, .x-info {
   position: absolute;
   width: 100%;
-  height: 100%;
+   height: 100%; 
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }

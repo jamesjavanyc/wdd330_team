@@ -26,16 +26,19 @@ const renderHomePage = async (dataSource) => {
                                 <p>My size is: ${item.size} </p>
                                 <p>My age is: ${item.personality} </p>
                                 <p>My breed is a ${item.breed} and my speciality is: ${item.special_gift} </p>
-                                <button type="button" onclick="window.location.href='./pages/pet-detail.html'"> Read More </button>
+                            <!--<button type="button" id="btn" onclick="window.location.href='./pages/pet-detail.html'"> Read More </button>-->
+                            <!-- <button type="button" id="btn${item.id}" value="${item.id}" onclick="sendData()"> Read More </button>-->
+                              <a href="./pages/pet-detail.html"><button onclick="sendData">Read More</button></a>  
+                            <!-- <button  value="${item.id}">Read More</button>-->
                             </div>
                         </div>
                     </div>
                 </div>	
             </li>
         `;
+
   }
   output += "</ul>"
   document.querySelector(".dogs").innerHTML = output;
-}
-
+  }
 renderHomePage(datasource);
