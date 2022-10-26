@@ -18,8 +18,7 @@ const renderHomePage = async (dataSource) => {
                             <img class="theimage" src="${item.imageUrl}" alt="${item.breed}">
                             <a href="https://www.xcdc.gov/tb/topic/basics/default.htm" target="_blank"></a>
                         </div>
-                        <div class="theback img-blank">
-                            <a href="https://www.cdc.gov/tb/topic/basics/default.htm" target="_blank"></a>
+                       
                             <div class="x-info">
                                 <h3>About me!</h3>
                                 <p>My age is: ${item.age} </p>
@@ -27,6 +26,7 @@ const renderHomePage = async (dataSource) => {
                                 <p>My size is: ${item.size} </p>
                                 <p>My age is: ${item.personality} </p>
                                 <p>My breed is a ${item.breed} and my speciality is: ${item.special_gift} </p>
+                                <button type="button" onclick="window.location.href='./pages/pet-detail.html'"> Read More </button>
                             </div>
                         </div>
                     </div>
