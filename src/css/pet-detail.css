@@ -14,6 +14,67 @@
   --color5: rgba(244, 68, 46, 1); /* Tomato*/
 }
 
+/*Section for the navigation bar*/
+.navigation {
+  display: grid;
+  position: relative;
+  font-family: "Roboto", monospace;
+  text-align: center;
+  background-color: #f5fbfc;
+  opacity: 0.7;
+  grid-template-columns:150px auto;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  position: relative;
+}
+
+.menu {
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.menu .menuItems {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+}
+
+.menu .menuItems li {
+  margin: 0 5% 0 20%;
+}
+
+.menu .menuItems li a {
+  text-decoration: none;
+  color: rgb(138, 126, 126);
+  font-size: 2em;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.menu .menuItems li a::before {
+  content: attr(data-item);
+  transition: 0.3s;
+  color: #ee5522;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.menu .menuItems li a:hover::before {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -256,6 +317,89 @@ img {
   animation-delay: 26s;
 }
 
+.container-footer {
+  width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 30px 0;
+}
+
+.footer-col {
+  width: 20%;
+  padding-left: 5%;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  margin-left: -10px;
+  padding-right: 120px;
+  text-transform: capitalize;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #fff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #fff;
+}
+
 @media screen and (min-width: 375px) {
   .card {
     max-width: 425px;
@@ -315,3 +459,4 @@ img {
     margin: 0 auto;
   }
 }
+
