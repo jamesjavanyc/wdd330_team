@@ -37,10 +37,14 @@
     </header>
 
     <main>
-        <h2 class="cfmContent">Thank you for your kindness! Your adopt request is sent, and we will contact you soon!</h2>
+        <h2 class = "cfmContent" id="cfmContent">Error order information</h2>
     </main>
 
-    <script src="js/.js"></script>
+    <script type="text/javascript">
+        let name = localStorage.getItem("name") + "  "
+        let content = name + "Thank you for your kindness! Your adopt request is sent, and we will contact you soon!"
+        document.querySelector("#cfmContent").innerHTML= content
+    </script>
 </body>
 
 </html>

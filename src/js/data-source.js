@@ -4,8 +4,7 @@ export default class DataSource{
         this.initialized = false;
     }
     async init(){
-        
-        if(localStorage.getItem("data") !== "null"){
+        if(localStorage.getItem("data") !== null){
             //we have the data in localstorage, so we need to get the stored data
             this.data = JSON.parse(localStorage.getItem("data"));
         }else{
@@ -14,6 +13,7 @@ export default class DataSource{
             localStorage.setItem("data",JSON.stringify(this.data))
         }
         this.initialized = true;
+        return this.data
     }
     getData(){
         if(this.initialized){
@@ -43,7 +43,10 @@ export default class DataSource{
         })
     }
     addDog(dog){
+        let _id = 1 + this.getDogs()[ this.getDogs.length - 1].id
+        dog.id = _id
         this.getDogs().append(dog);
+        console.log(this.data)
         localStorage.setItem("data",JSON.stringify(this.data))
     }
 

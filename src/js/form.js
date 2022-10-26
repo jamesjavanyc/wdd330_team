@@ -17,6 +17,13 @@ export const modifyData = (attri)=>{
         formData[target] = val;
     }
 }
+
+export const submitHandler = (e)=>{
+    e.preventDefault()
+    // logic
+    console.log(1)
+}
+window.submitHandler = submitHandler
 // bind with submit button
 // if you are bind in form.html, please add event listener with function submitForm("adopt")
 // if you are bind in add-dog.html, please add event listener with function submitForm("add")
