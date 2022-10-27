@@ -28,7 +28,7 @@
 
 /*Section for the navigation bar*/
 .navigation {
-  display: grid;
+  display: flex;
   position: relative;
   font-family: "Roboto", monospace;
   text-align: center;
@@ -39,12 +39,12 @@
 }
 
 .logo {
-  width: 150px;
+  width: 50%;
   height: auto;
-  position: relative;
 }
 
 .menu {
+  width: 50%;
   border-radius: 10px;
   padding: 5px;
 }
