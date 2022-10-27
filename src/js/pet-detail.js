@@ -26,12 +26,12 @@ async function initPage() {
   //TODO: start render
   let output = "<div class='card-head'>";
   // for (let item of data.dogs) {
-  console.log(data.dogs);
+  // console.log(data.dogs);
   let item = data.dogs.filter((dog) => dog.id === petId)[0];
   //  if (item.isAdopted == false) {
   //         continue
   //     }
-
+  console.log(item)
   output += `
     
         <img src="${item.imageUrl}" alt="dog" class="dog-image"/>
