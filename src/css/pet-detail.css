@@ -31,12 +31,13 @@
 }
 
 .logo {
-  width: 150px;
+  width: 50%;
   height: auto;
   position: relative;
 }
 
 .menu {
+  width: 50%;
   border-radius: 10px;
   padding: 5px;
 }
